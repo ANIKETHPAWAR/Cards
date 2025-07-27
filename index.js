@@ -42,7 +42,7 @@ function cards(users){
 const content =document.createElement('div')
 content.classList.add('content')
     const age=document.createElement('h3')
-    age.textContent=user.age
+    age.textContent=user.name
 
     const para=document.createElement('p');
     para.textContent=user.bio;
@@ -56,3 +56,12 @@ document.querySelector('.carddiv').appendChild(card)
  })
 }
 cards(users);
+let inp=document.querySelector('input');
+inp.addEventListener('change',()=>{
+    let nu=users.filter((user)=>{
+        return user.name.startsWith(inp.value);
+    });
+    document.querySelector('.carddiv').innerHTML=''
+    cards(nu)
+});
+

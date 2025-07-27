@@ -12,13 +12,8 @@
     background-color: black;
     color: white;
 }
-.maindiv{
+.carddiv{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.cardsdiv{
-  
-   
-   
 }
